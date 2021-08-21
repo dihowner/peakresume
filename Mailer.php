@@ -25,7 +25,7 @@ class Mailer {
     //Set an alternative reply-to address
     $this->mailer->addReplyTo($sender, '');
     //Set who the message is to be sent to
-    $this->mailer->addAddress($receiver, 'OGUNDOWOLE RAHEEM OPEYEMI');
+    $this->mailer->addAddress($receiver);
     //Set the subject line
     $this->mailer->Subject = $subject;
     //convert HTML into a basic plain-text alternative body
