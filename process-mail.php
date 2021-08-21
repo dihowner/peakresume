@@ -58,7 +58,7 @@ if(isset($_POST['sendEmail'])) {
         }
         
             
-//         print_r($_SESSION); 
+        print_r($_SESSION); 
         
         
     }
