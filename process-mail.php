@@ -1,9 +1,9 @@
 <?php
 error_reporting(E_ALL);
 session_start();
-// require_once "Mailer.php";
+require_once "Mailer.php";
 
-// $mailer = new Mailer();
+$mailer = new Mailer();
 
 if(isset($_POST['sendEmail'])) {
     extract($_POST);
@@ -44,22 +44,21 @@ if(isset($_POST['sendEmail'])) {
         Subject : ".$subject." <br><hr/>
          ".$message." <br>";
         
-         if(mail('oluwatayoadeyemi@yahoo.com', 'Get Started', $message_send, $headers)) {
-            $_SESSION["successMessage"] = "Dear <b>".$sender_name."</b>, Your message has been sent successfully to <b>RAHEEM</b> <br> Thank You";
-            $_SESSION["titleMessage"] = "Message Sent"; //For sweetalert
-         }
-        else {
+//          if(mail('oluwatayoadeyemi@yahoo.com', 'Get Started', $message_send, $headers)) {
+//             $_SESSION["successMessage"] = "Dear <b>".$sender_name."</b>, Your message has been sent successfully to <b>RAHEEM</b> <br> Thank You";
+//             $_SESSION["titleMessage"] = "Message Sent"; //For sweetalert
+//          }
+//         else {
             
-            $_SESSION["errorMessage"] = "We could not deliver your email at the moment, please try agains";
-            $_SESSION["titleMessage"] = "Invalid Email"; //For sweetalert
+//             $_SESSION["errorMessage"] = "We could not deliver your email at the moment, please try agains";
+//             $_SESSION["titleMessage"] = "Invalid Email"; //For sweetalert
 //             header("Location: ".$_SERVER['HTTP_REFERER']);
 //             exit();
 
-        }
+//         }
         
-        print_r($_SESSION);
+//         print_r($_SESSION);
         
-        /*
         if($mailer->sendmail('Get Started', $sender_email, 'oluwatayoadeyemi@yahoo.com', $message_send)) {
             
             //Send him a copy
@@ -79,9 +78,7 @@ if(isset($_POST['sendEmail'])) {
             exit();
 
         }
-        
-            */
-            
+       
         print_r($_SESSION); 
         
         
