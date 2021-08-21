@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 session_start();
 // require_once "Mailer.php";
 
@@ -28,6 +29,12 @@ if(isset($_POST['sendEmail'])) {
         Mobile : ".$sender_mobile." <br>
         Subject : ".$subject." <br><hr/>
          ".$message." <br>";
+        
+        $headers = array(
+            'From' => 'oluwatayoadeyemi@yahoo.com',
+            'Reply-To' => 'oluwatayoadeyemi@yahoo.com',
+            'X-Mailer' => 'PHP/' . phpversion()
+        );
 
         $message_send_copy = "Here is a Copy of your message to <b> RAHEEM </b> <br> <br>
 
@@ -37,7 +44,7 @@ if(isset($_POST['sendEmail'])) {
         Subject : ".$subject." <br><hr/>
          ".$message." <br>";
         
-         if(mail('oluwatayoadeyemi@yahoo.com', 'Get Started', $message_send)) {
+         if(mail('oluwatayoadeyemi@yahoo.com', 'Get Started', $message_send, $headers)) {
             $_SESSION["successMessage"] = "Dear <b>".$sender_name."</b>, Your message has been sent successfully to <b>RAHEEM</b> <br> Thank You";
             $_SESSION["titleMessage"] = "Message Sent"; //For sweetalert
          }
