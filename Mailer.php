@@ -13,14 +13,17 @@ require 'mailer/src/SMTP.php';
  * Class Mailer.
  */
 class Mailer {
-
+    
+    protected $mailer;
+    
     public function __construct() {
+        $this->mailer = $mailer;
         $this->mailer = new PHPMailer();
     }
     
    public function sendmail($subject, $sender, $receiver, $message) {
        
-       $this->mailer->SMTPSecure = 'tls'; //secure transfer enabled
+//        $this->mailer->SMTPSecure = 'tls'; //secure transfer enabled
 
     //Set who the message is to be sent from
     $this->mailer->setFrom($sender, $sender);
