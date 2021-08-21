@@ -20,6 +20,8 @@ class Mailer {
     
    public function sendmail($subject, $sender, $receiver, $message) {
        
+       $this->mailer->SMTPSecure = 'ssl'; //secure transfer enabled
+
     //Set who the message is to be sent from
     $this->mailer->setFrom($sender, $sender);
     //Set an alternative reply-to address
