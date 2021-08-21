@@ -1,7 +1,7 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\Exception;
 
 require 'mailer/src/Exception.php';
 require 'mailer/src/PHPMailer.php';
@@ -20,7 +20,7 @@ class Mailer {
     
    public function sendmail($subject, $sender, $receiver, $message) {
        
-       $this->mailer->SMTPSecure = 'ssl'; //secure transfer enabled
+//        $this->mailer->SMTPSecure = 'ssl'; //secure transfer enabled
 
     //Set who the message is to be sent from
     $this->mailer->setFrom($sender, $sender);
