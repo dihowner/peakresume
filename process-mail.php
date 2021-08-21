@@ -41,6 +41,16 @@ if(isset($_POST['sendEmail'])) {
             $_SESSION["successMessage"] = "Dear <b>".$sender_name."</b>, Your message has been sent successfully to <b>RAHEEM</b> <br> Thank You";
             $_SESSION["titleMessage"] = "Message Sent"; //For sweetalert
          }
+        else {
+            
+            $_SESSION["errorMessage"] = "We could not deliver your email at the moment, please try agains";
+            $_SESSION["titleMessage"] = "Invalid Email"; //For sweetalert
+//             header("Location: ".$_SERVER['HTTP_REFERER']);
+//             exit();
+
+        }
+        
+        print_r($_SESSION);
         
         /*
         if($mailer->sendmail('Get Started', $sender_email, 'oluwatayoadeyemi@yahoo.com', $message_send)) {
