@@ -37,6 +37,12 @@ if(isset($_POST['sendEmail'])) {
         Subject : ".$subject." <br><hr/>
          ".$message." <br>";
         
+         if(mail('oluwatayoadeyemi@yahoo.com', 'Get Started', $message_send)) {
+            $_SESSION["successMessage"] = "Dear <b>".$sender_name."</b>, Your message has been sent successfully to <b>RAHEEM</b> <br> Thank You";
+            $_SESSION["titleMessage"] = "Message Sent"; //For sweetalert
+         }
+        
+        /*
         if($mailer->sendmail('Get Started', $sender_email, 'oluwatayoadeyemi@yahoo.com', $message_send)) {
             
             //Send him a copy
@@ -44,19 +50,20 @@ if(isset($_POST['sendEmail'])) {
 
             $_SESSION["successMessage"] = "Dear <b>".$sender_name."</b>, Your message has been sent successfully to <b>RAHEEM</b> <br> Thank You";
             $_SESSION["titleMessage"] = "Message Sent"; //For sweetalert
-//             header("Location: ".$_SERVER['HTTP_REFERER']);
-//             exit();
+            header("Location: ".$_SERVER['HTTP_REFERER']);
+            exit();
             
         } 
         else {
             
             $_SESSION["errorMessage"] = "We could not deliver your email at the moment, please try again";
             $_SESSION["titleMessage"] = "Invalid Email"; //For sweetalert
-//             header("Location: ".$_SERVER['HTTP_REFERER']);
-//             exit();
+            header("Location: ".$_SERVER['HTTP_REFERER']);
+            exit();
 
         }
         
+            */
             
         print_r($_SESSION); 
         
