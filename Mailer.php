@@ -1,7 +1,7 @@
 <?php
 
-// use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 require 'mailer/src/Exception.php';
 require 'mailer/src/PHPMailer.php';
