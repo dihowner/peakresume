@@ -1,8 +1,8 @@
 <?php
 session_start();
-require_once "Mailer.php";
+// require_once "Mailer.php";
 
-$mailer = new Mailer();
+// $mailer = new Mailer();
 
 if(isset($_POST['sendEmail'])) {
     extract($_POST);
