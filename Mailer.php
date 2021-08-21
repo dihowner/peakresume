@@ -34,8 +34,8 @@ class Mailer {
     // $this->mailer->addAttachment('images/phpmailer_mini.png');
     //send the message, check for errors
     if (!$this->mailer->send()) {
-        return false;
-        // echo 'Mailer Error: '. $this->mailer->ErrorInfo;
+//         return false;
+        echo 'Mailer Error: '. $this->mailer->ErrorInfo;
     } else {
         return true;
     }
