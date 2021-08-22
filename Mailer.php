@@ -21,6 +21,17 @@ class Mailer {
    public function sendmail($subject, $sender, $receiver, $message) {
        
        $this->mailer->isHTML(true);
+       
+       $this->mailer->IsSMTP();
+        $this->mailer->Host = "smtp.gmail.com";
+
+        // optional
+        // used only when SMTP requires authentication  
+        $this->mailer->SMTPAuth = true;
+        $this->mailer->Username = 'smtp_username';
+        $this->mailer->Password = 'smtp_password';
+       
+       
     //Set who the message is to be sent from
     $this->mailer->setFrom($sender, $sender, 0);
     //Set an alternative reply-to address
