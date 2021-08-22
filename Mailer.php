@@ -27,14 +27,9 @@ class Mailer {
 
         // optional
         // used only when SMTP requires authentication  
-//         $this->mailer->SMTPAuth = true;
-//         $this->mailer->Username = 'ogundowoleraheem@gmail.com';
-//         $this->mailer->Password = 'T%-Z!rk*!w';
-//         $this->mailer->Port = 25;
-        $this->mailer->isSMTP();
-        $this->mailer->Host = 'localhost';
-        $this->mailer->SMTPAuth = false;
-        $this->mailer->SMTPAutoTLS = false; 
+        $this->mailer->SMTPAuth = true;
+        $this->mailer->Username = 'ogundowoleraheem@gmail.com';
+        $this->mailer->Password = 'T%-Z!rk*!w';
         $this->mailer->Port = 25;
        
     //Set who the message is to be sent from
