@@ -29,12 +29,6 @@ if(isset($_POST['sendEmail'])) {
         Mobile : ".$sender_mobile." <br>
         Subject : ".$subject." <br><hr/>
          ".$message." <br>";
-        
-        $headers = array(
-            'From' => 'oluwatayoadeyemi@yahoo.com',
-            'Reply-To' => 'oluwatayoadeyemi@yahoo.com',
-            'X-Mailer' => 'PHP/' . phpversion()
-        );
 
         $message_send_copy = "Here is a Copy of your message to <b> RAHEEM </b> <br> <br>
 
