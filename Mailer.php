@@ -37,7 +37,7 @@ class Mailer {
             'verify_peer_name' => false,
             'allow_self_signed' => true
         )
-    )
+    );
        
     //Set who the message is to be sent from
     $this->mailer->setFrom($sender, $sender, 0);
