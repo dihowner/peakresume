@@ -20,6 +20,7 @@ class Mailer {
     
    public function sendmail($subject, $sender, $receiver, $message) {
        
+       $this->mailer->isHTML(true);
     //Set who the message is to be sent from
     $this->mailer->setFrom($sender, $sender, 0);
     //Set an alternative reply-to address
