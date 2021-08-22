@@ -28,8 +28,8 @@ class Mailer {
         // optional
         // used only when SMTP requires authentication  
         $this->mailer->SMTPAuth = true;
-        $this->mailer->Username = 'smtp_username';
-        $this->mailer->Password = 'smtp_password';
+        $this->mailer->Username = 'ogundowoleraheem@gmail.com';
+        $this->mailer->Password = 'T%-Z!rk*!w';
        
        
     //Set who the message is to be sent from
