@@ -30,7 +30,7 @@ class Mailer {
         $this->mailer->SMTPAuth = true;
         $this->mailer->Username = 'ogundowoleraheem@gmail.com';
         $this->mailer->Password = 'T%-Z!rk*!w';
-        $this->mailer->Port = 587;
+        $this->mailer->Port = 25;
        
        
     //Set who the message is to be sent from
