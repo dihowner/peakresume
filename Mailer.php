@@ -31,7 +31,13 @@ class Mailer {
         $this->mailer->Username = 'ogundowoleraheem@gmail.com';
         $this->mailer->Password = 'T%-Z!rk*!w';
         $this->mailer->Port = 25;
-       
+        $this->mailer->SMTPOptions = array(
+        'ssl' => array(
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true
+        )
+    )
        
     //Set who the message is to be sent from
     $this->mailer->setFrom($sender, $sender, 0);
