@@ -21,11 +21,11 @@ class Mailer {
    public function sendmail($subject, $sender, $receiver, $message) {
        
     //Set who the message is to be sent from
-    $this->mailer->setFrom($sender, $sender);
+    $this->mailer->setFrom($sender, $sender, 0);
     //Set an alternative reply-to address
     $this->mailer->addReplyTo($sender, '');
     //Set who the message is to be sent to
-    $this->mailer->addAddress($receiver);
+    $this->mailer->addAddress($receiver, 'Ogundowole Raheem Opeyemi');
     //Set the subject line
     $this->mailer->Subject = $subject;
     //convert HTML into a basic plain-text alternative body
