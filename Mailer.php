@@ -20,8 +20,6 @@ class Mailer {
     
    public function sendmail($subject, $sender, $receiver, $message) {
        
-       $this->mailer->isHTML(true);
-       
        $this->mailer->IsSMTP();
         $this->mailer->Host = "smtp.gmail.com";
 
